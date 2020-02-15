@@ -41,6 +41,7 @@ namespace Rpa
         {
             driver.Navigate().GoToUrl(googleUrl);
             IWebElement inputBoxSearch = driver.FindElement(By.Name("q"));
+            Thread.Sleep(500);
             inputBoxSearch.SendKeys(wordToSearch);
             inputBoxSearch.Submit();
             Thread.Sleep(500);
